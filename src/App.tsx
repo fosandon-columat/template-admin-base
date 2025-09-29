@@ -18,6 +18,8 @@ import Blank from "./pages/Blank";
 import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
+import CursosPage from "./pages/cursos/CursosPage";
+import CursoDetalle from "./pages/cursos/CursoDetalle";
 
 export default function App() {
   return (
@@ -51,6 +53,10 @@ export default function App() {
             {/* Charts */}
             <Route path="/line-chart" element={<LineChart />} />
             <Route path="/bar-chart" element={<BarChart />} />
+
+            {/* Cursos Page */}
+            <Route path="/cursos" element={<CursosPage />} />
+            <Route path="/cursos/:id" element={<CursoDetalle />} />
           </Route>
 
           {/* Auth Layout */}
